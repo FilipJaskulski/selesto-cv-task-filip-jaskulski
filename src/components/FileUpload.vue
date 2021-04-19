@@ -31,7 +31,6 @@ export default {
     async onSubmit() {
       const formData = new FormData();
       formData.append("file", this.file);
-
       try {
         if (this.file.length != "") {
           await axios.post("/api/upload", formData);
